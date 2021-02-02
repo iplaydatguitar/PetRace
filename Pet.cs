@@ -43,9 +43,9 @@ namespace PetRace
 
         private float RunTo(Vector2 loc)
         {
+            var speed = 0f;
             float distance = Vector2.Subtract(this.Start, loc).Length();
 
-            var speed = 0f;
             if (this.Type == PetType.Dog)
             {
                 speed = 1.8f;
@@ -62,6 +62,7 @@ namespace PetRace
         {
             float speed = 3.0f;
             float distance = Vector2.Subtract(this.Start, loc).Length();
+
             return distance / speed;
         }
 
@@ -69,6 +70,7 @@ namespace PetRace
         {
             float speed = 0.5f;
             float distance = Vector2.Subtract(this.Start, loc).Length();
+
             return distance / speed;
         }
     }
