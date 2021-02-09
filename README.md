@@ -34,7 +34,7 @@ Extend the Pet class to support fish.
 
 ### Instructions
 1. Restrict your work in this phase to the `BetterPet.cs` file
-2. Within the contraints of the curent implementation add support for racing Note that fish swim, the do not walk, fly or slither.
+2. Within the contraints of the curent implementation add support for racing Note that fish swim, they do not walk, fly or slither.
 3. Add code comments pointing out specific challenges related to this exercise. 
 4. Add unit tests for all code artifacts in `BetterPet.cs`
 
