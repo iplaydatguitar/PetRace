@@ -10,7 +10,7 @@ This project is made available as a pre-screening exercise for candidates interv
 4. Make sure your forked repository is public
 5. Provide a link to your forked repository to those who provided the link to this repository
 
-IMPORTANT: Once you complete step #5 you response will be considered final.  It will be reviewed by the hiring manager and team within 48 business hours. Do not modify the repository once step #5 is complete. Doing so may jeopardize an objective evaluation of your work.
+IMPORTANT: Once you complete step #5 your response will be considered final.  It will be reviewed by the hiring manager and team within 48 business hours. Do not modify the repository once step #5 is complete. Doing so may jeopardize an objective evaluation of your work.
 
 ## Domain Description
 
