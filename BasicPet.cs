@@ -10,9 +10,9 @@ namespace PetRace
         Bird
     }
 
-    class Pet
+    class BasicPet
     {
-        public Pet(PetType type, Vector2 start)
+        public BasicPet(PetType type, Vector2 start)
         {
             this.Type = type;
             this.Start = start;
