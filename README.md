@@ -32,7 +32,7 @@ The implementation of the `Pet` class has a number of design problems. Review th
 
 ## 2. Programming Exercise
 
-My son wants a fish. Not just any fish. A shark. Sigh. Extend the Pet class to support fish.
+My son wants a fish. Not just any fish. A lionfish. Sigh. Extend the Pet class to support fish.
 
 ### Instructions
 1. Create an `exercise2` branch from `main`, which should contain the changes from the first exercise
