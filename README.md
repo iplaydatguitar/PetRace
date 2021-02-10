@@ -33,7 +33,7 @@ This class has a number of design problems. Review the design of the `Pet` class
 My son wants a fish. Not just any fish. A shark. Sigh. Extend the Pet class to support fish.
 
 ### Instructions
-1. Create an `exercise2` branch from `main` (main should include the changes you made in the first exercise)
+1. Create an `exercise2` branch from `main`, which should contain the changes from the first exercise
 2. Within the contraints of the curent implementation, add support for racing fish. Note that fish swim, they do not walk, fly or slither.
 3. Do not add any new source files or classes.
 3. Add code comments pointing out specific challenges related to this exercise. 
@@ -44,7 +44,7 @@ My son wants a fish. Not just any fish. A shark. Sigh. Extend the Pet class to s
 Refactor the solution to allow each pet to travel at it's own speed. For example, my 2 year old husky is a lot faster than my 10 year old pitbull-terrier mix, but they're both dogs. 
 
 ### Instructions
-1. Create an `exercise3` branch from `main` (main should now contain all changes from the previous two exercises)
+1. Create an `exercise3` branch from `main`, which should contain the cummulative changes from the previous two exercises
 2. Refactor this implementation to address the problems you identified in the first two exercises
 3. Update the solution to support discrete speeds for each pet 
 4. Feel free to create any additional source files and classes needed to refactor the solution.
