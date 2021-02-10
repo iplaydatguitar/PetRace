@@ -21,7 +21,7 @@ NOTE: There is no mechanism provided for actually executing a race. Adding a cla
 
 ## 1. Design Exercise
 
-The implementation of the `Pet` class has a number of design problems. Review the design of the `Pet` class and provide recommendations for how the design could be improved.
+The implementation of the `Pet` class has a number of design problems. Review the `Pet` class and provide recommendations for how the design could be improved.
 
 ### Instructions
 1. Create an `exercise1` branch from the `main` branch
