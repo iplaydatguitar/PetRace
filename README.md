@@ -7,8 +7,9 @@ This project is made available as a pre-screening exercise for candidates interv
 1. Fork this repository, and clone your fork
 2. Modify the code as requested for each exercise below
 3. Complete the exercises in the order they are given
-4. Make sure your forked repository is public
-5. Provide a link to your forked repository to those who provided the link to this repository
+4. DO NOT delete the branches that you create for each exercise when merging them to main
+5. Make sure your forked repository is public
+6. Provide a link to your forked repository to those who provided the link to this repository
 
 Once you complete step #5 the hiring manager and team will review your repository within two business days. 
 
@@ -20,13 +21,14 @@ NOTE: There is no mechanism provided for actually executing a race. Adding a cla
 
 ## 1. Design Exercise
 
-This class has a number of design problems. Review the design of the `Pet` class and provide recommendations for how the design can be improved.
+The implementation of the Pet class has a number of design problems. Review the design of the `Pet` class and provide recommendations for how the design could be improved.
 
 ### Instructions
 1. Create an `exercise1` branch from the `main` branch
 3. Add code comments to the `Pet` class pointing out specific design problems and propose a strategy for improving the design.
 4. DO NOT make changes to the code at this time 
-4. Commit your changes to the `exercise1` branch, merge it to `main` and push to your forked repository
+4. Commit your changes to the `exercise1` branch, merge it to `main` and push to your forked repository 
+5. (Reminder: do not delete the `exercise1` branch after merging to main)
 
 ## 2. Programming Exercise
 
@@ -38,6 +40,7 @@ My son wants a fish. Not just any fish. A shark. Sigh. Extend the Pet class to s
 3. Do not add any new source files or classes.
 3. Add code comments pointing out specific challenges related to this exercise. 
 4. Commit your changes to the `exercise2` branch, merge it to `main` and push to your forked repository
+5. (Reminder: do not delete the `exercise2` branch after merging to main)
 
 ## 3. Refactoring Exercise
 
