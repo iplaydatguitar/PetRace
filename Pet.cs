@@ -7,7 +7,8 @@ namespace PetRace
         Cat,
         Dog,
         Snake,
-        Bird
+        Bird,
+        Fish
     }
 
     /* 
@@ -44,6 +45,10 @@ namespace PetRace
 
                 case PetType.Snake:
                     return this.SlitherTo(loc);
+
+                // we're already making this switch statement longer and duplicating more code and it will continue to get longer for every PetType we add. This is not good.
+                case PetType.Fish:
+                    return this.SwimTo(loc);
 
                 default:
                     return 0;
@@ -96,6 +101,20 @@ namespace PetRace
         private float SlitherTo(Vector2 loc)
         {
             float speed = 0.5f;
+            float distance = Vector2.Subtract(this.Start, loc).Length();
+
+            return distance / speed;
+        }
+
+        /*
+         * This is identical to the previous 3 movement functions (RunTo, FlyTo, SlitherTo) and if there ever needs to be a change then
+         * We have to make sure we remember to change all of them together. Inevitably someday something will be missed and this will cause bugs.
+         * Ideally, these functions would be refactored as described in exercise 1. I assume this is not requested in exercise 2 so I didn't do any refactor.
+         * Something else to think about is that we're only using 2 coordinates. In a real world scenario, we would need to use 3 axis x,y,z.
+         */
+        private float SwimTo(Vector2 loc)
+        {
+            float speed = 1.2f; // I just guessed on a value that seemed to make sense. A refactor of these values was not explicitly requested so I didn't perform one.
             float distance = Vector2.Subtract(this.Start, loc).Length();
 
             return distance / speed;
