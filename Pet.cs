@@ -10,6 +10,11 @@ namespace PetRace
         Bird
     }
 
+    /* 
+    * It would be far better to make this abstract and instead create pet specific classes that inherit from BasicPet.
+    * That would eliminate the annoying switch and if statements that are difficult to maintain and harm readability.
+    * You could then have a move() function (or similar) that does the pet specific math. More on this later.
+    */
     class BasicPet
     {
         public BasicPet(PetType type, Vector2 start)
@@ -18,6 +23,8 @@ namespace PetRace
             this.Start = start;
         }
 
+        // As the code currently stands, there's no reason why these couldn't simply be private member variables.
+        // If you were to make the class abstract and derive pet specific classes then this makes more sense.
         protected Vector2 Start { get; private set; }
         protected PetType Type { get; private set; }
 
@@ -30,6 +37,8 @@ namespace PetRace
                 case PetType.Dog:
                     return this.RunTo(loc);
 
+                // Theoretically, couldn't a bird both fly or run? It would be very slow at running but this should be considered.
+                // Assuming this is refactored later, you could add a preferred movement option as a parameter to RaceTo() or an inherited move() function.
                 case PetType.Bird:
                     return this.FlyTo(loc);
 
@@ -41,6 +50,22 @@ namespace PetRace
             }
         }
 
+        /*
+         * RunTo(), FlyTo(), and SlitherTo() are dying for a refactor. They're essentially identical in logic the only difference being the speeds. I see
+         * 3 possible options:
+         * 
+         * 1. You could instead do a GetSpeed(PetType type) function to get the speed variables and then combine the functions. 
+         * 
+         * However, speed is always constant and specific to each pet type. So,
+         * 
+         * 2. You could make this class abstract, make pet specific inherited classes, and make speed a const variable in each class. 
+         * or
+         * 3. You could do the inheritance previously described and make speed a readonly member variable and allow each instance of each pet to have 
+         * differing speeds since not all animals move at exactly the same rate even if they're the same type (e.g. chihuahua vs greyhound).
+         * You can still use these existing numbers as defaults.
+         * 
+         * Note that options 2 and 3 don't require the inherited classes since you can add them in this existing class but it makes more sense to me to do it that way.
+         */
         private float RunTo(Vector2 loc)
         {
             var speed = 0f;
@@ -55,6 +80,8 @@ namespace PetRace
                 speed = 2.0f;
             }
 
+            // If RunTo() were called with a Type other than Dog or Cat than you could get a division by 0 exception.
+            // I suppose you could add and else block and return -1 or 0 and log the issue (or throw an exception) but I prefer one of my solutions listed above.
             return distance / speed;
         }
 
