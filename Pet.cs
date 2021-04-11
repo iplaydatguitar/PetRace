@@ -4,6 +4,9 @@ using System.Numerics;
 namespace PetRace
 {
     /*
+     * This alternative refactor changes BasicPet to a generic class, declares a new IPet interface to get the default speed, and changes the pet specific classes
+     * to now only care about returning the default speed. The default speed is now stored in the App.config settings so that they can be changed without modifying
+     * the code.
      */
     class BasicPet<T> where T : IPet, new()
     {
